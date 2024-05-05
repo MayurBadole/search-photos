@@ -31,10 +31,12 @@ const Images = () => {
           ))
         )}
       </div>
-      {photos.length === 0 && (
+      {photos.length === 0 && !isLoading && (
         <>
           <p className=" text-3xl text-red-600 text-center">No Data Found</p>
-          <p className=" text-lg text-center mt-3">please search another photo</p>
+          <p className=" text-lg text-center mt-3">
+            please search another photo
+          </p>
         </>
       )}
       {selectedImageUrl && (
