@@ -64,7 +64,7 @@ const SearchField = () => {
         onChange={handleInputChange}
         onFocus={handleFocus}
       />
-      {showSuggestions && (
+      {showSuggestions && suggestions.length !== 0 && (
         <ul className="absolute bg-white border border-gray-300 mt-10 py-1 px-2 rounded-b shadow-md w-full z-10">
           {suggestions.map((suggest, index) => (
             <li key={index} className="flex justify-between items-center">
